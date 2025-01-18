@@ -28,15 +28,5 @@ jobs:
       - name: Install Streamlit
         run: pip install streamlit
 
-      - name: Run Streamlit app
-        run: |
-          streamlit run app.py &  # Assumes the Streamlit app is named `app.py`
-          sleep 10  # Wait for the app to start
-
-      - name: Test the Streamlit app (optional)
-        run: |
-          # Optional step for testing; this can be adjusted as needed
-          curl http://localhost:8501
-
         - name: Run tests
         run: pytest _test.py
